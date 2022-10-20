@@ -1,43 +1,47 @@
-# Deskriptif
-# membuat Variabel nama barang
-# membuat Variabel harga barang
-# membuat Variabel persen barang
+# Deskriftif
+# membuat variabel nama barang
+# membuat variabel harga barang 
+# membuat variabel persen harga
 # input nama barang
-# input harga Barangbarang
+# input harga barang 
 # menghitung harga barang
-# harga barang * barang / 100
-# print harga barang beserta nama barang
+# harga barang * persen / 100
+# print harga barang bersama nama barang
 
-namabarang1 = input("\nMasukan nama barang : ")
-hargabarang1 = int(input("\nMasukan harga barang : Rp. "))
+modal_keseluruhan = 0
+laba_keseluruhan = 0
 
-namabarang2 = input("\nMasukan nama barang : ")
-hargabarang2 = int(input("\nMasukan harga barang : Rp. "))
+while(True):
+    nama_barang = input("Masukan nama barang :")
+    harga_barang1 =input("Masukan harga barang :")
+    persen = input('masukan persen barang')
+    barang_terjual = int(input('Masukan jumlah barang terjual'))
 
-namabarang3 = input("\nMasukan nama barang : ")
-hargabarang3 = int(input("\nMasukan harga barang : Rp. "))
-laba = int(input('masukan laba (%): '))
+    harga_keuntungan = int(harga_barang) * int(persen) / 100
+    harga_jual = int(harga_barang) + harga_keuntungan
 
-Modal = int(input('masukan modal awal : Rp. '))
+    # Menghitung modal
+    modal = harga_barang1 + barang_terjual
+    print(nama_barang,'dijual dengan: ',harga_jual)
+    modal_keseluruhan = modal_keseluruhan + Modal
 
-nilailaba1 = hargabarang1 * (laba/100)
-nilailaba2 = hargabarang2 * (laba/100)
-nilailaba3 = hargabarang3 * (laba/100)
-keuntungan1 = int(hargabarang1) * laba / 100
-keuntungan2 = int(hargabarang2) * laba / 100
-keuntungan3 = int(hargabarang3) * laba / 100
+    # Menghitung laba
+    laba = keuntungan_persen * barang_terjual
+    # Menghitung laba keseluruhan
+    laba_keseluruhan = laba_keseluruhan + laba
 
-harga1 = hargabarang1 + nilailaba1
-harga2 = hargabarang2 + nilailaba2
-harga3 = hargabarang3 + nilailaba3
-Total = harga1+harga2+harga3
-Totalk = keuntungan1 + keuntungan2 + keuntungan3
-Totalakhir = Modal - Totalk
+    print('barang', nama_barang)
+    print('harga barang', harga_barang)
+    print('keuntungan per barang', keuntungan persen)
+    print('dijual dengan harga', harga_jual)
+    print('terjual', barang_terjual)
+    print('modal', modal)
+    print('laba', laba)
 
-print(namabarang1, 'dijual dengan harga Rp. ' , harga1, 'dengan laba 10% senilai ',keuntungan1 )
-print(namabarang2, 'dijual dengan harga Rp. ' , harga2, 'dengan laba 10% senilai ',keuntungan2 )
-print(namabarang3, 'dijual dengan harga Rp. ' , harga3, 'dengan laba 10% senilai ',keuntungan3 )
-print('Total harga Jual     : Rp. ',Total)
-print('Modal yang dikeluarkan : Rp. ', Modal)
-print('Total Keuntungan    : Rp. ',Totalk)
-print('Total uang : Rp.', Totalakhir)
+    ApakahLanjut = input("apakah ingin input barang lain? Y lanjut : ")
+    if(ApakahLanjut != 'Y'):
+        break
+
+print('...............')
+print('modal keseluruhan',modal_keseluruhan)
+print('laba keseluruhan', laba_keseluruhan)
